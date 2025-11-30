@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <div class="navbar__logo">
+    <div class="logo">
         <div>
             <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 191.975 191.975" xml:space="preserve">
@@ -20,16 +20,16 @@
             </svg>
         </div>
         <div>
-            <p class="navbar__title">My Stats</p>
-            <p class="navbar__year">Year {{year}}</p>
+            <p class="title">My Stats</p>
+            <p class="year">Year {{year}}</p>
         </div>
     </div>
 
-    <button class="navbar__hamburger" (click)="toggleMenu()">
+    <button class="hamburger" (click)="toggleMenu()">
         ☰
     </button>
 
-    <div class="navbar__links" [class.navbar__links--open]="isMenuOpen">
+    <div class="links" [class.links--open]="isMenuOpen">
         <button>Dashboard</button>
         <button>Resume</button>
         <button>Profile</button>

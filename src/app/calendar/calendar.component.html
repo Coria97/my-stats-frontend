@@ -1,0 +1,27 @@
+<div class="calendar-container">
+    <div class="calendar-header">
+        <div class="navigation">
+            <button class="btn-arrow btn-arrow-left" (click)="previous()" title="Previous month">&lt;</button>
+            <h2>{{ currentDate | date: 'MMMM yyyy' }}</h2>
+            <button class="btn-arrow btn-arrow-right" (click)="next()" title="Next month">&gt;</button>
+        </div>
+        <div class="view-switcher" *ngIf="!isMobile">
+            <label class="switch btn-mode-switch">
+                <input type="checkbox" [checked]="currentView === 'week'" (change)="toggleView($event)" id="view_mode"
+                    name="view_mode">
+                <label class="btn-mode-switch-inner" data-off="Month" data-on="Week" for="view_mode"></label>
+            </label>
+        </div>
+    </div>
+
+    <div class="calendar-grid">
+        <div class="weekday-header" *ngFor="let day of weekDays">
+            {{ day }}
+        </div>
+        <div class="day-cell" *ngFor="let day of days" [class.not-current-month]="!day.isCurrentMonth"
+            [class.today]="day.isToday">
+            <div class="day-number">{{ day.date | date: 'd' }}</div>
+            <button class="add-activity-btn" (click)="addActivity(day.date)">+</button>
+        </div>
+    </div>
+</div>
