@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gradient-top-right);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.navbar__logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar__logo svg {
+    width: 50px;
+    height: auto;
+}
+
+.navbar__title {
+    margin-bottom: 5px;
+}
+
+.navbar__year {
+    margin-top: 5px;
+}
+
+p {
+    font-family: var(--font-family);
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: bold;
+    border-style: none;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 10px;
+}

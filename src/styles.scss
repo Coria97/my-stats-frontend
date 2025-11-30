@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* CSS HEX */
+:root {
+    --background-component-color: #86e7b8ff;
+    --light-green: #93ff96ff;
+    --botton-color: #d0ffb7ff;
+    --background-color: #f2f5deff;
+    --text-color: #000000;
+
+    /* SCSS Gradient */
+    --gradient-top: linear-gradient(0deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-right: linear-gradient(90deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-bottom: linear-gradient(180deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-left: linear-gradient(270deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-top-right: linear-gradient(45deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-top-left: linear-gradient(225deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-bottom-right: linear-gradient(135deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-bottom-left: linear-gradient(315deg, #86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+    --gradient-radial: radial-gradient(#86e7b8ff, #93ff96ff, #b2ffa8ff, #d0ffb7ff, #f2f5deff);
+
+    --font-family: 'Raleway', sans-serif;
+}
