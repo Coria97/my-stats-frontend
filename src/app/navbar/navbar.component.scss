@@ -3,29 +3,44 @@
     justify-content: space-between;
     align-items: center;
     background: var(--gradient-top-right);
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
+    background-repeat: no-repeat;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
 }
 
 .navbar__logo {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
 }
 
 .navbar__logo svg {
+    display: block;
     width: 50px;
     height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .navbar__title {
-    margin-bottom: 5px;
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
 }
 
 .navbar__year {
-    margin-top: 5px;
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
 p {
@@ -34,13 +49,84 @@ p {
     color: var(--text-color);
 }
 
-button {
+.navbar__links {
+    display: flex;
+    gap: 10px;
+
+    button {
+        cursor: pointer;
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: bold;
+        border-style: none;
+        background-color: transparent;
+        color: var(--text-color);
+        padding: 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+.navbar__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
     cursor: pointer;
-    font-family: var(--font-family);
-    font-size: 16px;
-    font-weight: bold;
-    border-style: none;
-    background-color: transparent;
     color: var(--text-color);
-    padding: 10px;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .navbar__hamburger {
+        display: block;
+    }
+
+    .navbar__title {
+        font-size: 1rem;
+    }
+
+    .navbar__year {
+        font-size: 0.8rem;
+    }
+
+    .navbar__logo svg {
+        width: 40px;
+    }
+
+    .navbar__links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 0.5rem;
+
+        &--open {
+            display: flex;
+        }
+
+        button {
+            width: 100%;
+            text-align: center;
+            padding: 0.8rem;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                transform: none;
+            }
+        }
+    }
 }

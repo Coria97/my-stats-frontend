@@ -24,7 +24,12 @@
             <p class="navbar__year">Year {{year}}</p>
         </div>
     </div>
-    <div>
+
+    <button class="navbar__hamburger" (click)="toggleMenu()">
+        ☰
+    </button>
+
+    <div class="navbar__links" [class.navbar__links--open]="isMenuOpen">
         <button>Dashboard</button>
         <button>Resume</button>
         <button>Profile</button>
